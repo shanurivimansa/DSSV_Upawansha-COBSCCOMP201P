@@ -7,4 +7,6 @@ target 'NIBM_Parking' do
 
   # Pods for NIBM_Parking
 
+pod 'RealmSwift', '~> 4.3.2'
+
 end
