@@ -7,6 +7,18 @@ target 'NIBM_Parking' do
 
   # Pods for NIBM_Parking
 
-pod 'RealmSwift', '~> 4.3.2'
+    pod 'RealmSwift', '~> 4.3.2'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+    pod 'AlamofireImage', '~> 4.1'
+    pod 'Firebase/Storage'
+    pod "RappleProgressHUD"
+    pod 'GoogleMaps'
+    pod 'GooglePlaces' 
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Messaging'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+
 
 end

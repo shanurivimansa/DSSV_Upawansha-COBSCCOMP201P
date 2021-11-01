@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,12 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //ASP.shared.manageUserDirection(window: window)
-//
-//    self.window = UIWindow(frame: UIScreen.main.bounds)
-//       ASP.shared.manageUserDirection(window: window)
-//
-//
-       return true
+        //
+        //    self.window = UIWindow(frame: UIScreen.main.bounds)
+        //       ASP.shared.manageUserDirection(window: window)
+        //
+        //
+        FirebaseApp.configure()
+        
+        return true
     }
     
     // MARK: UISceneSession Lifecycle
