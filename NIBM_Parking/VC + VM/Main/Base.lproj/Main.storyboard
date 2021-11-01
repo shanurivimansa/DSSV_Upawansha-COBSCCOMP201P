@@ -82,9 +82,6 @@
                                                         <rect key="frame" x="117.5" y="338" width="139.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
-                                                        <connections>
-                                                            <segue destination="Qne-Zs-sqB" kind="push" id="Qjv-kR-gxu"/>
-                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDJ-6v-nQD">
                                                         <rect key="frame" x="104" y="388" width="166.5" height="31"/>
@@ -154,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbu-fD-7UP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7B-lD-mRk">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="882"/>
@@ -387,19 +384,19 @@
         <!--Forgot Password-->
         <scene sceneID="fDK-gM-CiD">
             <objects>
-                <viewController id="Qne-Zs-sqB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordVC" id="Qne-Zs-sqB" customClass="ForgotPasswordVC" customModule="NIBM_Parking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wwx-Po-Qxd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQ7-GQ-NFi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDN-YE-u22">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-JT-iRY">
-                                                <rect key="frame" x="20" y="348" width="374" height="112"/>
+                                                <rect key="frame" x="20" y="331" width="374" height="112"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTI-dR-pD5">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -411,6 +408,9 @@
                                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Reset Password"/>
+                                                        <connections>
+                                                            <action selector="resetPasswordEmail:" destination="Qne-Zs-sqB" eventType="touchUpInside" id="SGf-z8-2oy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -452,6 +452,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Forgot Password" id="vyA-zh-puD"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="jTI-dR-pD5" id="bK7-Up-eGQ"/>
+                        <outlet property="resetPwdBtn" destination="Szn-mA-L7j" id="8W0-et-3l8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKT-EG-l5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,7 +472,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aan-BX-lJ3" kind="relationship" relationship="rootViewController" id="nTV-lm-Xi3"/>
+                        <segue destination="Qne-Zs-sqB" kind="relationship" relationship="rootViewController" id="gtx-24-JEk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Z8-Ew-rda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
