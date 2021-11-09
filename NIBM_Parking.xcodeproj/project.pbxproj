@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C549A83273AEA2000E4E584 /* TermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C549A82273AEA2000E4E584 /* TermsVC.swift */; };
 		8C65BC8A271F30C30069280F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65BC89271F30C30069280F /* AppDelegate.swift */; };
 		8C65BC8C271F30C30069280F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65BC8B271F30C30069280F /* SceneDelegate.swift */; };
 		8C65BC91271F30C30069280F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C65BC8F271F30C30069280F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		1D21E7146E392FAE01FFDCED /* Pods_NIBM_Parking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_Parking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2DA4628B9A6BA885FA328E /* Pods-NIBM_Parking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM_Parking.release.xcconfig"; path = "Target Support Files/Pods-NIBM_Parking/Pods-NIBM_Parking.release.xcconfig"; sourceTree = "<group>"; };
+		8C549A82273AEA2000E4E584 /* TermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
 		8C65BC86271F30C30069280F /* NIBM_Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBM_Parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C65BC89271F30C30069280F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C65BC8B271F30C30069280F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C549A84273AEA2600E4E584 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				8C549A82273AEA2000E4E584 /* TermsVC.swift */,
+			);
+			path = Terms;
+			sourceTree = "<group>";
+		};
 		8C65BC7D271F30C20069280F = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 				8CC12101273052AF00B063E1 /* Forgot Password */,
 				8CC120FA27303AE400B063E1 /* Available Slots */,
 				8CC47F722738DA8600BBD003 /* Scanner */,
+				8C549A84273AEA2600E4E584 /* Terms */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -381,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC120FC27303B1F00B063E1 /* SlotCell.swift in Sources */,
+				8C549A83273AEA2000E4E584 /* TermsVC.swift in Sources */,
 				8C831D53272B18E900CCC9C4 /* MainTBC.swift in Sources */,
 				8C831D40272B0EE100CCC9C4 /* ApplicationServiceProvider.swift in Sources */,
 				8CC47F712738DA7B00BBD003 /* ScannerVC.swift in Sources */,
@@ -547,13 +559,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G72LNDR5BT;
+				DEVELOPMENT_TEAM = 9584XYR28J;
 				INFOPLIST_FILE = NIBM_Parking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nibm.parking.NIBMParking;
+				PRODUCT_BUNDLE_IDENTIFIER = em.parking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -569,13 +581,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G72LNDR5BT;
+				DEVELOPMENT_TEAM = 9584XYR28J;
 				INFOPLIST_FILE = NIBM_Parking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nibm.parking.NIBMParking;
+				PRODUCT_BUNDLE_IDENTIFIER = em.parking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

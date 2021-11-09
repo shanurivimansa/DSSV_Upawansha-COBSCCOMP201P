@@ -1,41 +1,49 @@
 {
   "images" : [
     {
+      "filename" : "12651_26677_81387_R_minithumb.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "12651_26677_81387_R_minithumb-1.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+      "filename" : "12651_26677_81387_R_minithumb-2.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "12651_26677_81387_R_minithumb-3.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "12651_26677_81387_R_minithumb-4.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "12651_26677_81387_R_minithumb-5.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "12651_26677_81387_R_minithumb-6.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "12651_26677_81387_R_minithumb-7.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
