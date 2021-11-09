@@ -29,6 +29,7 @@
 		8CC120FC27303B1F00B063E1 /* SlotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120FB27303B1F00B063E1 /* SlotCell.swift */; };
 		8CC120FF27303C6600B063E1 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120FE27303C6600B063E1 /* SignUpVC.swift */; };
 		8CC12103273052EA00B063E1 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC12102273052EA00B063E1 /* ForgotPasswordVC.swift */; };
+		8CC47F712738DA7B00BBD003 /* ScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC47F702738DA7B00BBD003 /* ScannerVC.swift */; };
 		9FAA862BC3F485B0FDD4272D /* Pods_NIBM_Parking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D21E7146E392FAE01FFDCED /* Pods_NIBM_Parking.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		8CC120FB27303B1F00B063E1 /* SlotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotCell.swift; sourceTree = "<group>"; };
 		8CC120FE27303C6600B063E1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		8CC12102273052EA00B063E1 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		8CC47F702738DA7B00BBD003 /* ScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerVC.swift; sourceTree = "<group>"; };
 		B81EF360E217E1BFBF582688 /* Pods-NIBM_Parking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM_Parking.debug.xcconfig"; path = "Target Support Files/Pods-NIBM_Parking/Pods-NIBM_Parking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 				8CC120FD27303C3300B063E1 /* Sign Up */,
 				8CC12101273052AF00B063E1 /* Forgot Password */,
 				8CC120FA27303AE400B063E1 /* Available Slots */,
+				8CC47F722738DA8600BBD003 /* Scanner */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -216,6 +219,14 @@
 				8CC12102273052EA00B063E1 /* ForgotPasswordVC.swift */,
 			);
 			name = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		8CC47F722738DA8600BBD003 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				8CC47F702738DA7B00BBD003 /* ScannerVC.swift */,
+			);
+			path = Scanner;
 			sourceTree = "<group>";
 		};
 		E4F598C20F9010AC0C333021 /* Pods */ = {
@@ -372,6 +383,7 @@
 				8CC120FC27303B1F00B063E1 /* SlotCell.swift in Sources */,
 				8C831D53272B18E900CCC9C4 /* MainTBC.swift in Sources */,
 				8C831D40272B0EE100CCC9C4 /* ApplicationServiceProvider.swift in Sources */,
+				8CC47F712738DA7B00BBD003 /* ScannerVC.swift in Sources */,
 				8CC120EB272B848200B063E1 /* ApplicationControl.swift in Sources */,
 				8CC120F52730318C00B063E1 /* AlertProvider.swift in Sources */,
 				8CC120F32730303800B063E1 /* Utilities.swift in Sources */,
