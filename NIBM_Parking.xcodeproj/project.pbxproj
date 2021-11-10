@@ -82,13 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C549A84273AEA2600E4E584 /* Terms */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Terms;
-			sourceTree = "<group>";
-		};
 		8C65BC7D271F30C20069280F = {
 			isa = PBXGroup;
 			children = (
@@ -136,12 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				8C65BC8F271F30C30069280F /* Main.storyboard */,
-				8C831D4C272B17C700CCC9C4 /* Login */,
-				8CC120FD27303C3300B063E1 /* Sign Up */,
-				8CC12101273052AF00B063E1 /* Forgot Password */,
 				8CC120FA27303AE400B063E1 /* Available Slots */,
 				8CC47F722738DA8600BBD003 /* Scanner */,
-				8C549A84273AEA2600E4E584 /* Terms */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -172,13 +161,6 @@
 				8C831D52272B18E900CCC9C4 /* MainTBC.swift */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		8C831D4C272B17C700CCC9C4 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		8C831D4D272B17DF00CCC9C4 /* Models */ = {
@@ -270,20 +252,6 @@
 				8CC120FB27303B1F00B063E1 /* SlotCell.swift */,
 			);
 			path = "Available Slots";
-			sourceTree = "<group>";
-		};
-		8CC120FD27303C3300B063E1 /* Sign Up */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Sign Up";
-			sourceTree = "<group>";
-		};
-		8CC12101273052AF00B063E1 /* Forgot Password */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Forgot Password";
 			sourceTree = "<group>";
 		};
 		8CC47F722738DA8600BBD003 /* Scanner */ = {
