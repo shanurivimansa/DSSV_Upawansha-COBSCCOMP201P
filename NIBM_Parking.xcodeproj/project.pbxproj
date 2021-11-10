@@ -23,6 +23,8 @@
 		8C831D53272B18E900CCC9C4 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C831D52272B18E900CCC9C4 /* MainTBC.swift */; };
 		8CA86AA9273C21C0002A5D73 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA86AA8273C21C0002A5D73 /* Auth.storyboard */; };
 		8CA86AAC273C2595002A5D73 /* Storyboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */; };
+		8CB95903273C2A5F00DAB777 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB95902273C2A5F00DAB777 /* ProfileVC.swift */; };
+		8CB95906273C2B1900DAB777 /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB95905273C2B1900DAB777 /* BookingVC.swift */; };
 		8CC120EB272B848200B063E1 /* ApplicationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120EA272B848200B063E1 /* ApplicationControl.swift */; };
 		8CC120EF272FBCEF00B063E1 /* SlotsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120EE272FBCEF00B063E1 /* SlotsVC.swift */; };
 		8CC120F32730303800B063E1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120F22730303800B063E1 /* Utilities.swift */; };
@@ -57,6 +59,8 @@
 		8C831D52272B18E900CCC9C4 /* MainTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
 		8CA86AA8273C21C0002A5D73 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+extension.swift"; sourceTree = "<group>"; };
+		8CB95902273C2A5F00DAB777 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		8CB95905273C2B1900DAB777 /* BookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingVC.swift; sourceTree = "<group>"; };
 		8CC120EA272B848200B063E1 /* ApplicationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationControl.swift; sourceTree = "<group>"; };
 		8CC120EE272FBCEF00B063E1 /* SlotsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsVC.swift; sourceTree = "<group>"; };
 		8CC120F22730303800B063E1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				8C65BC8F271F30C30069280F /* Main.storyboard */,
 				8CC120FA27303AE400B063E1 /* Available Slots */,
 				8CC47F722738DA8600BBD003 /* Scanner */,
+				8CB95901273C2A3C00DAB777 /* Profile */,
+				8CB95904273C2B0200DAB777 /* Bookings */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -243,6 +249,22 @@
 				8C549A82273AEA2000E4E584 /* TermsVC.swift */,
 			);
 			path = Terms;
+			sourceTree = "<group>";
+		};
+		8CB95901273C2A3C00DAB777 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8CB95902273C2A5F00DAB777 /* ProfileVC.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		8CB95904273C2B0200DAB777 /* Bookings */ = {
+			isa = PBXGroup;
+			children = (
+				8CB95905273C2B1900DAB777 /* BookingVC.swift */,
+			);
+			name = Bookings;
 			sourceTree = "<group>";
 		};
 		8CC120FA27303AE400B063E1 /* Available Slots */ = {
@@ -414,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB95906273C2B1900DAB777 /* BookingVC.swift in Sources */,
 				8CC120FC27303B1F00B063E1 /* SlotCell.swift in Sources */,
 				8C549A83273AEA2000E4E584 /* TermsVC.swift in Sources */,
 				8CA86AAC273C2595002A5D73 /* Storyboard+extension.swift in Sources */,
@@ -423,6 +446,7 @@
 				8CC120EB272B848200B063E1 /* ApplicationControl.swift in Sources */,
 				8CC120F52730318C00B063E1 /* AlertProvider.swift in Sources */,
 				8CC120F32730303800B063E1 /* Utilities.swift in Sources */,
+				8CB95903273C2A5F00DAB777 /* ProfileVC.swift in Sources */,
 				8CC12103273052EA00B063E1 /* ForgotPasswordVC.swift in Sources */,
 				8C831D46272B128400CCC9C4 /* RealmService.swift in Sources */,
 				8C65BC8A271F30C30069280F /* AppDelegate.swift in Sources */,
