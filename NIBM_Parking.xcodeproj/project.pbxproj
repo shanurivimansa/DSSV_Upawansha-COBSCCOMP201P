@@ -21,6 +21,7 @@
 		8C831D4A272B13A500CCC9C4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C831D49272B13A500CCC9C4 /* LoginVC.swift */; };
 		8C831D51272B186700CCC9C4 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C831D50272B186700CCC9C4 /* TabBar.storyboard */; };
 		8C831D53272B18E900CCC9C4 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C831D52272B18E900CCC9C4 /* MainTBC.swift */; };
+		8CA86AA9273C21C0002A5D73 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA86AA8273C21C0002A5D73 /* Auth.storyboard */; };
 		8CC120EB272B848200B063E1 /* ApplicationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120EA272B848200B063E1 /* ApplicationControl.swift */; };
 		8CC120EF272FBCEF00B063E1 /* SlotsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120EE272FBCEF00B063E1 /* SlotsVC.swift */; };
 		8CC120F32730303800B063E1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120F22730303800B063E1 /* Utilities.swift */; };
@@ -53,6 +54,7 @@
 		8C831D49272B13A500CCC9C4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8C831D50272B186700CCC9C4 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		8C831D52272B18E900CCC9C4 /* MainTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
+		8CA86AA8273C21C0002A5D73 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		8CC120EA272B848200B063E1 /* ApplicationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationControl.swift; sourceTree = "<group>"; };
 		8CC120EE272FBCEF00B063E1 /* SlotsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsVC.swift; sourceTree = "<group>"; };
 		8CC120F22730303800B063E1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -60,8 +62,8 @@
 		8CC120F6273034C200B063E1 /* LoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
 		8CC120F8273035BE00B063E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CC120FB27303B1F00B063E1 /* SlotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotCell.swift; sourceTree = "<group>"; };
-		8CC120FE27303C6600B063E1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		8CC12102273052EA00B063E1 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		8CC120FE27303C6600B063E1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpVC.swift; path = Main/SignUpVC.swift; sourceTree = "<group>"; };
+		8CC12102273052EA00B063E1 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordVC.swift; path = Main/ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		8CC47F702738DA7B00BBD003 /* ScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerVC.swift; sourceTree = "<group>"; };
 		B81EF360E217E1BFBF582688 /* Pods-NIBM_Parking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM_Parking.debug.xcconfig"; path = "Target Support Files/Pods-NIBM_Parking/Pods-NIBM_Parking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				8C65BCA2271F333B0069280F /* Launch */,
+				8CA86AA4273C20EC002A5D73 /* Auth */,
 				8C65BCA0271F33220069280F /* Main */,
 				8C831D36272B01C300CCC9C4 /* TabBar */,
 			);
@@ -172,7 +175,6 @@
 		8C831D4C272B17C700CCC9C4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				8C831D49272B13A500CCC9C4 /* LoginVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -207,6 +209,41 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		8CA86AA4273C20EC002A5D73 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8CA86AA8273C21C0002A5D73 /* Auth.storyboard */,
+				8CA86AA7273C2108002A5D73 /* Forgot Password */,
+				8CA86AA6273C20FE002A5D73 /* Sign Up */,
+				8CA86AA5273C20F6002A5D73 /* Login */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		8CA86AA5273C20F6002A5D73 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8C831D49272B13A500CCC9C4 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8CA86AA6273C20FE002A5D73 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				8CC120FE27303C6600B063E1 /* SignUpVC.swift */,
+			);
+			name = "Sign Up";
+			sourceTree = "<group>";
+		};
+		8CA86AA7273C2108002A5D73 /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				8CC12102273052EA00B063E1 /* ForgotPasswordVC.swift */,
+			);
+			name = "Forgot Password";
+			sourceTree = "<group>";
+		};
 		8CC120FA27303AE400B063E1 /* Available Slots */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +256,6 @@
 		8CC120FD27303C3300B063E1 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
-				8CC120FE27303C6600B063E1 /* SignUpVC.swift */,
 			);
 			name = "Sign Up";
 			sourceTree = "<group>";
@@ -227,7 +263,6 @@
 		8CC12101273052AF00B063E1 /* Forgot Password */ = {
 			isa = PBXGroup;
 			children = (
-				8CC12102273052EA00B063E1 /* ForgotPasswordVC.swift */,
 			);
 			name = "Forgot Password";
 			sourceTree = "<group>";
@@ -317,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA86AA9273C21C0002A5D73 /* Auth.storyboard in Resources */,
 				8C831D51272B186700CCC9C4 /* TabBar.storyboard in Resources */,
 				8C65BC96271F30CA0069280F /* LaunchScreen.storyboard in Resources */,
 				8CC120F9273035BE00B063E1 /* GoogleService-Info.plist in Resources */,
