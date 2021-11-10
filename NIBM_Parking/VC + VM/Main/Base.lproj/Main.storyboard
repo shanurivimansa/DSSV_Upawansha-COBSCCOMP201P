@@ -269,24 +269,6 @@
             </objects>
             <point key="canvasLocation" x="3939" y="-370"/>
         </scene>
-        <!--Terms and Conditions-->
-        <scene sceneID="H2X-v7-jnL">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dhB-rg-28S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="TermsVC" id="fOO-tp-GBj" customClass="TermsVC" customModule="NIBM_Parking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nka-xQ-rxh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7iq-hE-flO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Terms and Conditions" id="mR0-uQ-BJj">
-                        <barButtonItem key="backBarButtonItem" title=" " id="8gA-6p-X1E"/>
-                    </navigationItem>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="3817" y="360"/>
-        </scene>
     </scenes>
     <resources>
         <image name="12651_26677_81387_R_minithumb" width="80" height="80"/>

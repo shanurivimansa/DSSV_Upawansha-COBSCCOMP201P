@@ -9,6 +9,10 @@ import UIKit
 import FirebaseCore
 import FirebaseMessaging
 
+
+let appDelegate = (UIApplication.shared.delegate as? AppDelegate)
+
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -17,13 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //ASP.shared.manageUserDirection(window: window)
-        //
-        //    self.window = UIWindow(frame: UIScreen.main.bounds)
-        //       ASP.shared.manageUserDirection(window: window)
-        //
-        //
+        
         FirebaseApp.configure()
+        
+        self.navigateToRegardingView()
         
         return true
     }
@@ -43,9 +44,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func setAsRoot(_controller: UIViewController) {
-        if window != nil {
-            window?.rootViewController = _controller
+//    func setAsRoot(_controller: UIViewController) {
+//        if window != nil {
+//            window?.rootViewController = _controller
+//        }
+//    }
+    
+    
+    
+    func navigateToRegardingView() {
+        if let _ = LocalUser.current() {
+            let mainSB = UIStoryboard.init(storyboard: .Auth)
+            let navCon = mainSB.instantiateViewController(with: ForgotPasswordVC.self)
+            window?.rootViewController = navCon
+            window?.makeKeyAndVisible()
+        } else {
+            let registrationSB = UIStoryboard.init(storyboard: .Auth)
+            let navCon = registrationSB.instantiateViewController(with: LoginVC.self)
+            window?.rootViewController = navCon
+            window?.makeKeyAndVisible()
         }
     }
     

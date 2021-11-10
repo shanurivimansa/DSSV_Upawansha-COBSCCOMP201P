@@ -82,9 +82,6 @@
                                                         <rect key="frame" x="117.5" y="338" width="139.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
-                                                        <connections>
-                                                            <segue destination="5uW-fV-d1Q" kind="show" id="SI3-gl-7DC"/>
-                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GK-b2-QV9">
                                                         <rect key="frame" x="104" y="388" width="166.5" height="31"/>
@@ -150,11 +147,11 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpVC" id="5uW-fV-d1Q" customClass="SignUpVC" customModule="NIBM_Parking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IZ0-Sq-dOl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12h-ck-P15">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-n3-EZb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="882"/>
@@ -358,6 +355,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ez-lQ-zeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2926.0869565217395" y="360.26785714285711"/>
+        </scene>
+        <!--Terms and Conditions-->
+        <scene sceneID="9lr-69-FzV">
+            <objects>
+                <viewController storyboardIdentifier="TermsVC" id="irD-Y4-XsT" customClass="TermsVC" customModule="NIBM_Parking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NmM-Cx-G5T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wt9-ek-I1G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Terms and Conditions" id="gde-Tt-zbl">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vIA-gR-6Hl"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpP-pI-mu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2848" y="1068"/>
         </scene>
     </scenes>
     <resources>

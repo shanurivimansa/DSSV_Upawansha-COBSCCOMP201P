@@ -92,16 +92,14 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
                 
                 self.getUserDetailsByUserID(userIDTxt: result?.user.uid)
                 
+                let _user = User(_id: "a", firebaseId: "2", uuid: "11", name: "", promorterName: "", contactPersonName: "", abn: "", website: "", firstName: "", fullName: "", role: "", lastName: "", email: "", mobile: "", gender: 1, address: "", dob: "", emailVerifiedAt: "", password: "", twoFactorSecret: "", twoFactorRecoveryCodes: "", rememberToken: "", createdAt: "", updatedAt: "", disabledAt: "", disabledByUserId: 1, emailConfirmationSentAt: "", emailConfirmedAt: "", confirmationCode: "", avatarUrl: "", avatarPath: "", avatarDisk: "", deletedAt: "", deletedByUserId: 1, timezone: "", accessToken: "", type: 1)
+                LocalUser.saveLoginData(user: _user)
+                
                 let okAction = AlertAction(title: .Ok)
                 
                 AlertProvider(vc: self).showAlertWithActions(title: "Alert", message: "Loggin Succefully", actions: [okAction], completion: { action in
                     if action.title == .Ok {
-                        
-//                        let mainstoryboard = UIStoryboard(name: "TabBarController", bundle: nil)
-//                        let viewController = mainstoryboard.instantiateViewController(withIdentifier: "MainTBC") as! UITabBarController
-//                        self.view.window?.rootViewController = viewController
-//                        self.view.window?.makeKeyAndVisible()
-                        
+                        appDelegate?.navigateToRegardingView()
                         self.userNameTxt.text = ""
                         self.pwdTxt.text = ""
                     } else {
@@ -111,11 +109,7 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
             }
         }
     }
-    //        let email = userNameTxt.text
-    //
-    //        let _user = User(_id: "a", firebaseId: "2", uuid: "11", name: "", promorterName: "", contactPersonName: "", abn: "", website: "", firstName: "", fullName: "", role: "", lastName: "", email: "", mobile: "", gender: 1, address: "", dob: "", emailVerifiedAt: "", password: "", twoFactorSecret: "", twoFactorRecoveryCodes: "", rememberToken: "", createdAt: "", updatedAt: "", disabledAt: "", disabledByUserId: 1, emailConfirmationSentAt: "", emailConfirmedAt: "", confirmationCode: "", avatarUrl: "", avatarPath: "", avatarDisk: "", deletedAt: "", deletedByUserId: 1, timezone: "", accessToken: "", type: 1)
-    //        LocalUser.saveLoginData(user: _user)
-    //        print(LocalUser.current())
+
     
     
     
