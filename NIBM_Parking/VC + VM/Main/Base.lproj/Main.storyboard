@@ -266,6 +266,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="logOutUser:" destination="dUk-g3-OsM" eventType="touchUpInside" id="Fd6-Qx-vho"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
