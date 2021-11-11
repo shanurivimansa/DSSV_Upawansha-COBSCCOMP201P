@@ -25,7 +25,6 @@
 		8CA86AAC273C2595002A5D73 /* Storyboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */; };
 		8CB95903273C2A5F00DAB777 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB95902273C2A5F00DAB777 /* ProfileVC.swift */; };
 		8CB95906273C2B1900DAB777 /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB95905273C2B1900DAB777 /* BookingVC.swift */; };
-		8CC120EB272B848200B063E1 /* ApplicationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120EA272B848200B063E1 /* ApplicationControl.swift */; };
 		8CC120EF272FBCEF00B063E1 /* SlotsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120EE272FBCEF00B063E1 /* SlotsVC.swift */; };
 		8CC120F32730303800B063E1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120F22730303800B063E1 /* Utilities.swift */; };
 		8CC120F52730318C00B063E1 /* AlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC120F42730318C00B063E1 /* AlertProvider.swift */; };
@@ -61,7 +60,6 @@
 		8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+extension.swift"; sourceTree = "<group>"; };
 		8CB95902273C2A5F00DAB777 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		8CB95905273C2B1900DAB777 /* BookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingVC.swift; sourceTree = "<group>"; };
-		8CC120EA272B848200B063E1 /* ApplicationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationControl.swift; sourceTree = "<group>"; };
 		8CC120EE272FBCEF00B063E1 /* SlotsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsVC.swift; sourceTree = "<group>"; };
 		8CC120F22730303800B063E1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8CC120F42730318C00B063E1 /* AlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProvider.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 			children = (
 				8C831D3F272B0EE100CCC9C4 /* ApplicationServiceProvider.swift */,
 				8C831D41272B104A00CCC9C4 /* Localizator.swift */,
-				8CC120EA272B848200B063E1 /* ApplicationControl.swift */,
 				8CC120F22730303800B063E1 /* Utilities.swift */,
 				8CC120F42730318C00B063E1 /* AlertProvider.swift */,
 				8CC120F6273034C200B063E1 /* LoadingDelegate.swift */,
@@ -443,7 +440,6 @@
 				8C831D53272B18E900CCC9C4 /* MainTBC.swift in Sources */,
 				8C831D40272B0EE100CCC9C4 /* ApplicationServiceProvider.swift in Sources */,
 				8CC47F712738DA7B00BBD003 /* ScannerVC.swift in Sources */,
-				8CC120EB272B848200B063E1 /* ApplicationControl.swift in Sources */,
 				8CC120F52730318C00B063E1 /* AlertProvider.swift in Sources */,
 				8CC120F32730303800B063E1 /* Utilities.swift in Sources */,
 				8CB95903273C2A5F00DAB777 /* ProfileVC.swift in Sources */,

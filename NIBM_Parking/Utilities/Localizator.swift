@@ -26,11 +26,7 @@ extension String {
     static let Loading = NSLocalizedString("Loading...", comment: "")
     static let Uploading = NSLocalizedString("Uploading...", comment: "")
     
-    // File extensions
-    static let PDF = NSLocalizedString("pdf", comment: "")
-    static let HTML = NSLocalizedString("html", comment: "")
-    static let DOCX = NSLocalizedString("docx", comment: "")
-    static let PNG = NSLocalizedString("png", comment: "")
+    
     
     // Nibs
     
@@ -66,7 +62,6 @@ extension String {
     static let InvalidPhone = NSLocalizedString("Invalid phone number.", comment: "")
     static let InvalidUrl = NSLocalizedString("Invalid url.", comment: "")
     static let InvalidPassword = NSLocalizedString("Invalid password.", comment: "")
-   // static let ShorterPassword = NSLocalizedString("Password should be at least \(Constant.Counts.passwordCount) characters.", comment: "")
     static let MismatchingPasswords = NSLocalizedString("Passwords do not match.", comment: "")
     static let NoCameraPermission = NSLocalizedString("No camera permission set.", comment: "")
     static let CurrentPasswordEmpty = NSLocalizedString("Please enter current password.", comment: "")
@@ -119,7 +114,6 @@ extension String {
     static let TakePhoto = NSLocalizedString("Take Photo", comment: "")
     static let ChooseFromLibrary = NSLocalizedString("Choose from Library", comment: "")
     
-    // Placeholders
     
     // Other
     static let NotApplicable = NSLocalizedString("N/A", comment: "")
@@ -127,69 +121,20 @@ extension String {
     static let QuestionMark = NSLocalizedString("?", comment: "")
     static let SingleQotation = NSLocalizedString("'", comment: "")
     static let EmptyString = NSLocalizedString("", comment: "")
-    
-    // Storyboard identifiers
+
     
     // ViewControllers
     static let LoginVC = NSLocalizedString("LoginVC", comment: "")
     static let SignupVC = NSLocalizedString("SignupVC", comment: "")
-    static let SelectUserTypeVC = NSLocalizedString("SelectUserTypeVC", comment: "")
-    static let SignupPromoterVC = NSLocalizedString("SignupPromoterVC", comment: "")
-    static let SignupVerifyVC = NSLocalizedString("SignupVerifyVC", comment: "")
-    static let TutorialVC = NSLocalizedString("TutorialVC", comment: "")
-    static let EventDetailVC = NSLocalizedString("EventDetailVC", comment: "")
-    static let ViewVenueVC = NSLocalizedString("ViewVenueVC", comment: "")
-    static let ViewTicketsVC = NSLocalizedString("ViewTicketsVC", comment: "")
-    static let AcceptTicketVC = NSLocalizedString("AcceptTicketVC", comment: "")
-    static let AssignTicketVC = NSLocalizedString("AssignTicketVC", comment: "")
-    static let SquadVC = NSLocalizedString("SquadVC", comment: "")
-    static let MySquadVC = NSLocalizedString("MySquadVC", comment: "")
-    static let MessageVC = NSLocalizedString("MessageVC", comment: "")
-    static let UserMoreVC = NSLocalizedString("UserMoreVC", comment: "")
-    static let GuestHomeVC = NSLocalizedString("GuestHomeVC", comment: "")
-    
-    
-    static let DeleteVC = NSLocalizedString("DeleteVC", comment: "")
-    static let InviteVC = NSLocalizedString("InviteVC", comment: "")
-    static let BuyTicketsVC = NSLocalizedString("BuyTicketsVC", comment: "")
     static let ForgotPasswordVC = NSLocalizedString("ForgotPasswordVC", comment: "")
     static let EditProfileVC = NSLocalizedString("EditProfileVC", comment: "")
-    static let ChangePasswordVC = NSLocalizedString("ChangePasswordVC", comment: "")
-    static let AppDetailsVC = NSLocalizedString("AppDetailsVC", comment: "")
     static let HomeVC = NSLocalizedString("HomeVC", comment: "")
-    static let DetailsVC = NSLocalizedString("DetailsVC", comment: "")
-    static let ForgotPasswordChangePasswordVC = NSLocalizedString("ForgotPasswordChangePasswordVC", comment: "")
-    static let AboutUsVC = NSLocalizedString("AboutUsVC", comment: "")
-    static let ReportVC = NSLocalizedString("ReportVC", comment: "")
-    static let SuggestionVC = NSLocalizedString("SuggestionVC", comment: "")
-    static let LogoutAlertVC = NSLocalizedString("LogoutAlertVC", comment: "")
-    static let GuestSignInVC = NSLocalizedString("GuestSignInVC", comment: "")
     
-    // Chat viewControllers
-    static let MessagesVC = NSLocalizedString("MessagesVC", comment: "")
-    static let MediaViewerVC = NSLocalizedString("MediaViewerVC", comment: "")
-    static let UsersVC = NSLocalizedString("UsersVC", comment: "")
-    static let ConversationsVC = NSLocalizedString("ConversationsVC", comment: "")
-    
-    static let Document = NSLocalizedString("Document", comment: "")
-    static let Location = NSLocalizedString("Location", comment: "")
-    static let Contact = NSLocalizedString("Contact", comment: "")
-    
-    // Promoter
-    static let RegisterPaymentVC = NSLocalizedString("RegisterPaymentVC", comment: "")
-    static let CreateEventStepOneVC = NSLocalizedString("CreateEventStepOneVC", comment: "")
-    static let CreateEventStepTwoVC = NSLocalizedString("CreateEventStepTwoVC", comment: "")
-    static let PromoterHomeVC = NSLocalizedString("PromoterHomeVC", comment: "")
-    static let AddStaffVC = NSLocalizedString("AddStaffVC", comment: "")
     
     // Top viewController of the Storyboard
     static let AuthNC = NSLocalizedString("AuthNC", comment: "")
-    static let GuestHomeNC = NSLocalizedString("GuestHomeNC", comment: "")
     static let HomeNC = NSLocalizedString("HomeNC", comment: "")
-    static let SideMenuConfigurationVC = NSLocalizedString("SideMenuConfigurationVC", comment: "")
     static let MainTBC = NSLocalizedString("MainTBC", comment: "")
-    static let PromoterTBC = NSLocalizedString("PromoterTBC", comment: "")
-    static let GuestTBC = NSLocalizedString("GuestTBC", comment: "")
     
     // Error messages with API
     
