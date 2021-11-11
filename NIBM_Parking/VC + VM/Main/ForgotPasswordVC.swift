@@ -10,18 +10,18 @@ import Firebase
 
 
 class ForgotPasswordVC: UIViewController,LoadingIndicatorDelegate {
-
+    
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var resetPwdBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     //Mark Validate Fields
     func validateFields() -> String? {
         
@@ -38,7 +38,6 @@ class ForgotPasswordVC: UIViewController,LoadingIndicatorDelegate {
             return "Invalid formatted email address"
         }
         
-        
         return nil
     }
     
@@ -54,7 +53,7 @@ class ForgotPasswordVC: UIViewController,LoadingIndicatorDelegate {
                 
                 AlertProvider(vc: self).showAlertWithActions(title: "Alert", message: error?.localizedDescription ?? "", actions: [okAction], completion: { action in
                     if action.title == .Ok {
-                        
+                        self.emailTxt.text = ""
                     } else {
                         // Will dismiss alertView by default
                     }
@@ -93,5 +92,5 @@ class ForgotPasswordVC: UIViewController,LoadingIndicatorDelegate {
         }
     }
     
-
+    
 }

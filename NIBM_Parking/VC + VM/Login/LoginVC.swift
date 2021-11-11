@@ -13,7 +13,7 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
     
     
     var ref: DatabaseReference! = Database.database().reference()
-
+    
     
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var pwdTxt: UITextField!
@@ -23,27 +23,6 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
         
         // Do any additional setup after loading the view.
     }
-    
-    
-    @IBAction func loginUser(_ sender: Any) {
-        
-        let validation = validateFields()
-        
-        if validation == nil{
-            loginNetworkRequest()
-        }else{
-            let okAction = AlertAction(title: .Ok)
-            
-            AlertProvider(vc: self).showAlertWithActions(title: "Error", message:validation ?? "", actions: [okAction], completion: { action in
-                if action.title == .Ok {
-                } else {
-                    // Will dismiss alertView by default
-                }
-            })
-        }
-        
-    }
-    
     
     //Mark Validate Fields
     func validateFields() -> String? {
@@ -109,7 +88,7 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
             }
         }
     }
-
+    
     
     
     
@@ -128,6 +107,29 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
         }
         
     }
+    
+    
+    @IBAction func loginUser(_ sender: Any) {
+        
+        let validation = validateFields()
+        
+        if validation == nil{
+            loginNetworkRequest()
+        }else{
+            let okAction = AlertAction(title: .Ok)
+            
+            AlertProvider(vc: self).showAlertWithActions(title: "Error", message:validation ?? "", actions: [okAction], completion: { action in
+                if action.title == .Ok {
+                } else {
+                    // Will dismiss alertView by default
+                }
+            })
+        }
+        
+    }
+    
+    
+    
 }
 
 

@@ -22,7 +22,7 @@ class SignUpVC: UIViewController,LoadingIndicatorDelegate {
     
     
     var ref: DatabaseReference! = Database.database().reference()
-
+    
     
     
     override func viewDidLoad() {
@@ -30,26 +30,6 @@ class SignUpVC: UIViewController,LoadingIndicatorDelegate {
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func signUpUser(_ sender: Any) {
-        
-        let validation = validateFields()
-        
-        if validation == nil{
-            registerUserNetworkRequest()
-        }else{
-            let okAction = AlertAction(title: .Ok)
-            
-            AlertProvider(vc: self).showAlertWithActions(title: "Error", message:validation ?? "", actions: [okAction], completion: { action in
-                if action.title == .Ok {
-                } else {
-                    // Will dismiss alertView by default
-                }
-            })
-        }
-        
-    }
-    
     
     //MARK:Validations
     func validateFields() -> String? {
@@ -126,14 +106,15 @@ class SignUpVC: UIViewController,LoadingIndicatorDelegate {
                 
                 let okAction = AlertAction(title: .Ok)
                 AlertProvider(vc: self).showAlertWithActions(title: "Alert", message: "Registered Successfully" , actions: [okAction], completion: { action in
+                    
+                    
+                    let _user = User(_id: "a", firebaseId: "2", uuid: "11", name: "", promorterName: "", contactPersonName: "", abn: "", website: "", firstName: "", fullName: "", role: "", lastName: "", email: "", mobile: "", gender: 1, address: "", dob: "", emailVerifiedAt: "", password: "", twoFactorSecret: "", twoFactorRecoveryCodes: "", rememberToken: "", createdAt: "", updatedAt: "", disabledAt: "", disabledByUserId: 1, emailConfirmationSentAt: "", emailConfirmedAt: "", confirmationCode: "", avatarUrl: "", avatarPath: "", avatarDisk: "", deletedAt: "", deletedByUserId: 1, timezone: "", accessToken: "", type: 1)
+                    LocalUser.saveLoginData(user: _user)
+                    
                     if action.title == .Ok {
                         
-                         self.getUserDetailsByUserID(userIDTxt: result?.user.uid)
-                    
+                        self.getUserDetailsByUserID(userIDTxt: result?.user.uid)
                         
-//                        self.emailTextField.text = ""
-//                        self.phoneTextField.text = ""
-//                        self.passwordTextField.text = ""
                         
                     } else {
                         // Will dismiss alertView by default
@@ -159,4 +140,27 @@ class SignUpVC: UIViewController,LoadingIndicatorDelegate {
         }
         
     }
+    
+    
+    @IBAction func signUpUser(_ sender: Any) {
+        
+        let validation = validateFields()
+        
+        if validation == nil{
+            registerUserNetworkRequest()
+        }else{
+            let okAction = AlertAction(title: .Ok)
+            
+            AlertProvider(vc: self).showAlertWithActions(title: "Error", message:validation ?? "", actions: [okAction], completion: { action in
+                if action.title == .Ok {
+                } else {
+                    // Will dismiss alertView by default
+                }
+            })
+        }
+        
+    }
+    
+    
+    
 }
