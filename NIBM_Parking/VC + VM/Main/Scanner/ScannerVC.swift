@@ -17,7 +17,12 @@ class ScannerVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         checkForAuthorizationsCamera()
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -34,6 +39,8 @@ class ScannerVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
         switch cameraAuthorizationStatus {
         case .denied:
             NSLog("cameraAuthorizationStatus=denied")
+            alertPromptToAllowCameraAccessViaSetting()
+            
             break
         case .authorized:
             NSLog("cameraAuthorizationStatus=authorized")
@@ -66,22 +73,50 @@ class ScannerVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
             break
         case .restricted:
             NSLog("cameraAuthorizationStatus=restricted")
+            alertPromptToAllowCameraAccessViaSetting()
             break
         case .notDetermined:
             NSLog("cameraAuthorizationStatus=notDetermined")
-            
-            // Prompting user for the permission to use the camera.
-            AVCaptureDevice.requestAccess(for: cameraMediaType) { granted in
-                DispatchQueue.main.sync {
-                    if granted {
-                        // do something
-                    } else {
-                        // do something else
-                    }
+            requestAceess()
+            break
+        }
+        
+    }
+    
+    
+    func requestAceess(){
+        let cameraMediaType = AVMediaType.video
+
+        // Prompting user for the permission to use the camera.
+        AVCaptureDevice.requestAccess(for: cameraMediaType) { granted in
+            DispatchQueue.main.sync {
+                if granted {
+                    // do something
+                } else {
+                    // do something else
                 }
             }
         }
-        
+    }
+    
+    
+    
+    func alertPromptToAllowCameraAccessViaSetting() {
+
+        let alert = UIAlertController(
+            title: "IMPORTANT",
+            message: "Camera access required for capturing photos!",
+            preferredStyle: UIAlertController.Style.alert
+        )
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel) { alert in
+            if AVCaptureDevice.devices(for: AVMediaType.video).count > 0 {
+                AVCaptureDevice.requestAccess(for: AVMediaType.video) { granted in
+                    DispatchQueue.main.async() {
+                        self.checkForAuthorizationsCamera() } }
+            }
+            }
+        )
+        present(alert, animated: true, completion: nil)
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
@@ -99,3 +134,4 @@ class ScannerVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
     }
     
 }
+
