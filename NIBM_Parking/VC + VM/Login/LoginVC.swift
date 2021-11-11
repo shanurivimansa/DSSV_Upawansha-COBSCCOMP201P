@@ -78,7 +78,7 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
                 
                 AlertProvider(vc: self).showAlertWithActions(title: "Alert", message: "Loggin Succefully", actions: [okAction], completion: { action in
                     if action.title == .Ok {
-                        appDelegate?.navigateToRegardingView()
+                        self.sceneDelegate?.navigateToRegardingView()
                         self.userNameTxt.text = ""
                         self.pwdTxt.text = ""
                     } else {

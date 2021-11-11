@@ -19,7 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
        // ASP.shared.manageUserDirection(window: window)
 
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        self.window = UIWindow(windowScene: windowScene)
+        
+        self.navigateToRegardingView()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -49,7 +53,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
+    func navigateToRegardingView() {
+        if let _ = LocalUser.current() {
+            let mainSB = UIStoryboard.init(storyboard: .TabBar)
+            let navCon = mainSB.instantiateViewController(with: MainTBC.self)
+            window?.rootViewController = navCon
+            window?.makeKeyAndVisible()
+        } else {
+            let registrationSB = UIStoryboard.init(storyboard: .Auth)
+            let navCon = registrationSB.instantiateViewController(with: LoginVC.self)
+            window?.rootViewController = navCon
+            window?.makeKeyAndVisible()
+        }
+    }
 
 
 }
 
+extension UIViewController {
+    var sceneDelegate: SceneDelegate? {
+        for scene in UIApplication.shared.connectedScenes {
+            if let delegate = scene.delegate as? SceneDelegate {
+                return delegate
+            }
+        }
+        return nil
+    }
+}

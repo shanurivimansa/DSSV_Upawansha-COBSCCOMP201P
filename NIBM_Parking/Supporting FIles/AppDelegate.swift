@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         FirebaseApp.configure()
-        
-        self.navigateToRegardingView()
+    
         
         return true
     }
@@ -51,20 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
     
     
-    
-    func navigateToRegardingView() {
-        if let _ = LocalUser.current() {
-            let mainSB = UIStoryboard.init(storyboard: .Auth)
-            let navCon = mainSB.instantiateViewController(with: ForgotPasswordVC.self)
-            window?.rootViewController = navCon
-            window?.makeKeyAndVisible()
-        } else {
-            let registrationSB = UIStoryboard.init(storyboard: .Auth)
-            let navCon = registrationSB.instantiateViewController(with: LoginVC.self)
-            window?.rootViewController = navCon
-            window?.makeKeyAndVisible()
-        }
-    }
+
     
 }
 
