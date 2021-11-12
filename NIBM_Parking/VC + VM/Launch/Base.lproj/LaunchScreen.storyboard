@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7iP-tV-hdL">
                                 <rect key="frame" x="87" y="345" width="240" height="206"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12651_26677_81387_R_minithumb" translatesAutoresizingMaskIntoConstraints="NO" id="obJ-xJ-6rn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="j244-19_webamends-logo-resizing_767px-wide_v1_nibm" translatesAutoresizingMaskIntoConstraints="NO" id="obJ-xJ-6rn">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Ica-K4-ZyB"/>
@@ -50,7 +50,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="12651_26677_81387_R_minithumb" width="80" height="80"/>
+        <image name="j244-19_webamends-logo-resizing_767px-wide_v1_nibm" width="767" height="385"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
