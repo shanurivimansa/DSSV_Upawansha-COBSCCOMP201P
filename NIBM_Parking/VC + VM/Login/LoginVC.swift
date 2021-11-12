@@ -128,7 +128,23 @@ class LoginVC: UIViewController,LoadingIndicatorDelegate {
         
     }
     
+    @IBAction func clickOnRegisterBtn(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
+    @IBAction func clickOnForgotPwd(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordVC") as! ForgotPasswordVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func clickOnTerms(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TermsVC") as! TermsVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 

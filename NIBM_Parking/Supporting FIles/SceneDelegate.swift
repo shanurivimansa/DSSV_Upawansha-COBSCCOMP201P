@@ -61,10 +61,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = navCon
             window?.makeKeyAndVisible()
         } else {
+
             let registrationSB = UIStoryboard.init(storyboard: .Auth)
-            let navCon = registrationSB.instantiateViewController(with: LoginVC.self)
-            window?.rootViewController = navCon
+            let rootVC:LoginVC = registrationSB.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            let nvc:UINavigationController = registrationSB.instantiateViewController(withIdentifier: "AuthNC") as! UINavigationController
+            nvc.viewControllers = [rootVC]
+            window?.rootViewController = nvc
             window?.makeKeyAndVisible()
+            
         }
     }
 
