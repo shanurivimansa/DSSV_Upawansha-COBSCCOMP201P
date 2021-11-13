@@ -8,12 +8,19 @@
 import UIKit
 import AVFoundation
 
+
+protocol scannerDelegate{
+    func didScannedSlotQR(slotNo:String)
+}
+
 class ScannerVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
     
     @IBOutlet weak var square: UIImageView!
     
     var previewLayer = AVCaptureVideoPreviewLayer()
     let session = AVCaptureSession()
+    
+    var delegate:scannerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,6 +132,11 @@ class ScannerVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
             print("readableObject :: \(readbleObject.stringValue)")
             let alert = UIAlertController(title: "QR Code", message: readbleObject.stringValue, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                
+                if let val = readbleObject.stringValue{
+                    self.delegate?.didScannedSlotQR(slotNo:val)
+                }
+                
                 self.session.stopRunning()
             }))
             

@@ -29,7 +29,7 @@ class SlotsVC: UIViewController,LoadingIndicatorDelegate {
     
     func getAvailableSlots(){
         self.startLoading()
-        vm.fetchFoods { success, code, message in
+        vm.fetchSlots { success, code, message in
             self.stopLoading()
             
             if success{

@@ -24,6 +24,7 @@
 		8CA684EF274002C200405DE9 /* SlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA684EE274002C200405DE9 /* SlotModel.swift */; };
 		8CA684F12740086100405DE9 /* SlotVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA684F02740086100405DE9 /* SlotVM.swift */; };
 		8CA684F32740099B00405DE9 /* Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA684F22740099B00405DE9 /* Handlers.swift */; };
+		8CA684F5274019E900405DE9 /* BookingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA684F4274019E900405DE9 /* BookingVM.swift */; };
 		8CA86AA9273C21C0002A5D73 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA86AA8273C21C0002A5D73 /* Auth.storyboard */; };
 		8CA86AAC273C2595002A5D73 /* Storyboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */; };
 		8CB95903273C2A5F00DAB777 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB95902273C2A5F00DAB777 /* ProfileVC.swift */; };
@@ -62,6 +63,7 @@
 		8CA684EE274002C200405DE9 /* SlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotModel.swift; sourceTree = "<group>"; };
 		8CA684F02740086100405DE9 /* SlotVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotVM.swift; sourceTree = "<group>"; };
 		8CA684F22740099B00405DE9 /* Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handlers.swift; sourceTree = "<group>"; };
+		8CA684F4274019E900405DE9 /* BookingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingVM.swift; sourceTree = "<group>"; };
 		8CA86AA8273C21C0002A5D73 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+extension.swift"; sourceTree = "<group>"; };
 		8CB95902273C2A5F00DAB777 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				8CB95905273C2B1900DAB777 /* BookingVC.swift */,
+				8CA684F4274019E900405DE9 /* BookingVM.swift */,
 			);
 			name = Bookings;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				8CA684F32740099B00405DE9 /* Handlers.swift in Sources */,
 				8C549A83273AEA2000E4E584 /* TermsVC.swift in Sources */,
 				8CA86AAC273C2595002A5D73 /* Storyboard+extension.swift in Sources */,
+				8CA684F5274019E900405DE9 /* BookingVM.swift in Sources */,
 				8C831D53272B18E900CCC9C4 /* MainTBC.swift in Sources */,
 				8C831D40272B0EE100CCC9C4 /* ApplicationServiceProvider.swift in Sources */,
 				8CC47F712738DA7B00BBD003 /* ScannerVC.swift in Sources */,
