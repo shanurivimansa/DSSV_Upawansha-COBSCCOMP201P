@@ -9,6 +9,10 @@ import UIKit
 
 class BookingVC: UIViewController {
 
+    @IBOutlet weak var scanQrBtn: UIButton!
+    @IBOutlet weak var slotNoTxt: UITextField!
+    @IBOutlet weak var bookBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,5 +20,11 @@ class BookingVC: UIViewController {
     }
     
 
-
+    @IBAction func scanQrCodes(_ sender: Any) {
+        
+        
+    }
+    @IBAction func bookSlotAction(_ sender: Any) {
+    }
+    
 }

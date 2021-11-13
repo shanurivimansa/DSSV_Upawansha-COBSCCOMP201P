@@ -70,6 +70,16 @@ extension SlotsVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SlotCell") as! SlotCell
+        
+        switch indexPath.section{
+        case 0:
+            cell.configCell(model: vm.vipSlotList[indexPath.row])
+        case 1:
+            cell.configCell(model: vm.normalSlotList[indexPath.row])
+        default:
+            print("")
+        }
+   
         return cell
     }
     

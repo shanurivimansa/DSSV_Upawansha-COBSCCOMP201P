@@ -46,16 +46,6 @@
             </objects>
             <point key="canvasLocation" x="-1198" y="404"/>
         </scene>
-        <!--ScannerVC-->
-        <scene sceneID="WzL-Fw-URA">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K5h-Rh-6i1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ScannerVC" id="031-Ke-wgs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="R2k-lP-9Mz"/>
-                </viewControllerPlaceholder>
-            </objects>
-            <point key="canvasLocation" x="-967" y="417"/>
-        </scene>
         <!--BookingVC-->
         <scene sceneID="XXZ-Hx-ayM">
             <objects>
