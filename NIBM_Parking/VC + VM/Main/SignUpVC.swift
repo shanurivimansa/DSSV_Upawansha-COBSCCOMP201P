@@ -108,7 +108,7 @@ class SignUpVC: UIViewController,LoadingIndicatorDelegate {
                 AlertProvider(vc: self).showAlertWithActions(title: "Alert", message: "Registered Successfully" , actions: [okAction], completion: { action in
                     
                     
-                    let _user = User(_id: "a", firebaseId: "2", uuid: "11", name: "", promorterName: "", contactPersonName: "", abn: "", website: "", firstName: "", fullName: "", role: "", lastName: "", email: "", mobile: "", gender: 1, address: "", dob: "", emailVerifiedAt: "", password: "", twoFactorSecret: "", twoFactorRecoveryCodes: "", rememberToken: "", createdAt: "", updatedAt: "", disabledAt: "", disabledByUserId: 1, emailConfirmationSentAt: "", emailConfirmedAt: "", confirmationCode: "", avatarUrl: "", avatarPath: "", avatarDisk: "", deletedAt: "", deletedByUserId: 1, timezone: "", accessToken: "", type: 1)
+                    let _user = User(userID: "", vehicleNo: "", confirmPassword: "", contactNo: "", email: "", name: "", nic: "", password: "", registerNo: "")
                     LocalUser.saveLoginData(user: _user)
                     
                     if action.title == .Ok {

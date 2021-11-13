@@ -9,30 +9,21 @@ import Foundation
 import RealmSwift
 
 class LocalUser: Object {
-    
-    @objc dynamic var id: String = ""
-    @objc dynamic var firebaseId: String = ""
-    @objc dynamic var uuid: String = ""
-    @objc dynamic var firstName: String = ""
-    @objc dynamic var lastName: String = ""
-    @objc dynamic var fullName: String = ""
-    @objc dynamic var email: String = ""
-    @objc dynamic var avatarUrl: String = ""
-    @objc dynamic var phone: String = ""
-    @objc dynamic var accessToken: String = ""
-    
-    @objc dynamic var dob: String = ""
-    @objc dynamic var gender: Int = 0
-    @objc dynamic var mobile: String = ""
-    @objc dynamic var address: String = ""
-    @objc dynamic var timezone: String = ""
-    @objc dynamic var role: String = ""
-    @objc dynamic var type: Int = 0
+
+    @objc dynamic var userID: String = ""
+    @objc dynamic var vehicleNo:String = ""
+    @objc dynamic var confirmPassword:String = ""
+    @objc dynamic var contactNo:String = ""
+    @objc dynamic var email:String = ""
+    @objc dynamic var name:String = ""
+    @objc dynamic var nic:String = ""
+    @objc dynamic var password:String = ""
+    @objc dynamic var registerNo:String = ""
     
     
     
     override class func primaryKey() -> String? {
-        return "id"
+        return "userID"
     }
     
     // Get the first object of User Model
@@ -56,24 +47,15 @@ class LocalUser: Object {
     class func createLocalUser(user: User?) {
         
         let newUser = LocalUser()
-        newUser.id = user?._id ?? "0"
-        newUser.firebaseId = user?.firebaseId ?? ""
-        newUser.firstName = user?.firstName ?? ""
-        newUser.lastName = user?.lastName ?? ""
-        newUser.fullName = user?.fullName ?? ""
+        newUser.confirmPassword = user?.confirmPassword ?? "0"
+        newUser.contactNo = user?.contactNo ?? ""
         newUser.email = user?.email ?? ""
-        newUser.avatarUrl = user?.avatarUrl ?? ""
-        newUser.accessToken = user?.accessToken ?? ""
-        
-        newUser.dob = user?.dob ?? ""
-        newUser.gender = user?.gender ?? 0
-        newUser.mobile = user?.mobile ?? ""
-        newUser.address = user?.address ?? ""
-
-        newUser.timezone = user?.timezone ?? ""
-        newUser.role = user?.role ?? ""
-        newUser.type = user?.type ?? 0
-        
+        newUser.name = user?.name ?? ""
+        newUser.nic = user?.nic ?? ""
+        newUser.password = user?.password ?? ""
+        newUser.registerNo = user?.registerNo ?? ""
+        newUser.userID = user?.userID ?? ""
+        newUser.vehicleNo = user?.vehicleNo ?? ""
         
         
         
@@ -86,12 +68,10 @@ class LocalUser: Object {
         if let currentUser = LocalUser.current() {
             switch type {
             case .Info:
-                let dict: [String: Any?] = ["firstName": user?.firstName ?? "", "email": user?.email ?? "", "lastName": user?.lastName ?? ""]
+                let dict: [String: Any?] = ["firstName": user?.name ?? "", "email": user?.email ?? "", "lastName": user?.name ?? ""]
                 RealmService.shared.update(object: currentUser, with: dict)
                 break
-            case .Avatar:
-                let dict: [String: Any?] = ["avatarUrl": user?.avatarUrl ?? ""]
-                RealmService.shared.update(object: currentUser, with: dict)
+            
             default:
                 break
             }

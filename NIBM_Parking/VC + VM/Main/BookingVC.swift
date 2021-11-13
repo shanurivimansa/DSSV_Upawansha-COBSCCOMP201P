@@ -25,26 +25,41 @@ class BookingVC: UIViewController,LoadingIndicatorDelegate {
     }
     
 
+//
+//    func fetchAvailableSlots(){
+//        let okAction = AlertAction(title: .Ok)
+//        self.startLoading()
+//        vm.fetchSlots{ success,code,message in
+//            if success{
+//
+//
+//                let idAvailable = self.vm.SlotList.filter({$0.slotId == self.slotNoTxt.text})
+//                if let dataToIdAvailable = idAvailable.first{
+//                    if dataToIdAvailable.isAvailable != "true"{
+//                        self.stopLoading()
+//                        AlertProvider(vc: self).showAlert(title: "Alert", message: "Slot is Not Available !!", action: okAction)
+//                    }else{
+//                        self.ref.child("slots").child(self.slotNoTxt.text ?? "").updateChildValues(["isAvailable": "false"])
+//                    }
+//                }
+//            }
+//
+//        }
+//    }
     
-    func fetchAvailableSlots(){
-        let okAction = AlertAction(title: .Ok)
+    
+    func fetchAvailableSlots(slotIDTxt:String?) {
         self.startLoading()
-        vm.fetchSlots{ success,code,message in
-            if success{
-                
-                
-                let idAvailable = self.vm.SlotList.filter({$0.slotId == self.slotNoTxt.text})
-                if let dataToIdAvailable = idAvailable.first{
-                    if dataToIdAvailable.isAvailable != "true"{
-                        self.stopLoading()
-                        AlertProvider(vc: self).showAlert(title: "Alert", message: "Slot is Not Available !!", action: okAction)
-                    }else{
-                        self.ref.child("slots").child(self.slotNoTxt.text ?? "").updateChildValues(["isAvailable": "false"])
-                    }
-                }
-            }
-            
+        
+        ref.child("slots").child(slotIDTxt ?? "").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            print(value)
+            self.stopLoading()
+        }) { (error) in
+            print(error.localizedDescription)
         }
+        
     }
     
     
@@ -58,7 +73,7 @@ class BookingVC: UIViewController,LoadingIndicatorDelegate {
     }
     @IBAction func bookSlotAction(_ sender: Any) {
         
-        fetchAvailableSlots()
+        fetchAvailableSlots(slotIDTxt: slotNoTxt.text)
         
     }
     
