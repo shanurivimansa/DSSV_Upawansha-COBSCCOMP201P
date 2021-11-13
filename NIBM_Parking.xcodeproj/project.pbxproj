@@ -21,6 +21,7 @@
 		8C831D4A272B13A500CCC9C4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C831D49272B13A500CCC9C4 /* LoginVC.swift */; };
 		8C831D51272B186700CCC9C4 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C831D50272B186700CCC9C4 /* TabBar.storyboard */; };
 		8C831D53272B18E900CCC9C4 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C831D52272B18E900CCC9C4 /* MainTBC.swift */; };
+		8CA684EF274002C200405DE9 /* SlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA684EE274002C200405DE9 /* SlotModel.swift */; };
 		8CA86AA9273C21C0002A5D73 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA86AA8273C21C0002A5D73 /* Auth.storyboard */; };
 		8CA86AAC273C2595002A5D73 /* Storyboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */; };
 		8CB95903273C2A5F00DAB777 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB95902273C2A5F00DAB777 /* ProfileVC.swift */; };
@@ -56,6 +57,7 @@
 		8C831D49272B13A500CCC9C4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8C831D50272B186700CCC9C4 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		8C831D52272B18E900CCC9C4 /* MainTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
+		8CA684EE274002C200405DE9 /* SlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotModel.swift; sourceTree = "<group>"; };
 		8CA86AA8273C21C0002A5D73 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		8CA86AAB273C2595002A5D73 /* Storyboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+extension.swift"; sourceTree = "<group>"; };
 		8CB95902273C2A5F00DAB777 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				8C831D47272B12C000CCC9C4 /* User.swift */,
 				8C831D43272B122700CCC9C4 /* LocalUser.swift */,
+				8CA684EE274002C200405DE9 /* SlotModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				8CC12103273052EA00B063E1 /* ForgotPasswordVC.swift in Sources */,
 				8C831D46272B128400CCC9C4 /* RealmService.swift in Sources */,
 				8C65BC8A271F30C30069280F /* AppDelegate.swift in Sources */,
+				8CA684EF274002C200405DE9 /* SlotModel.swift in Sources */,
 				8CC120FF27303C6600B063E1 /* SignUpVC.swift in Sources */,
 				8CC120EF272FBCEF00B063E1 /* SlotsVC.swift in Sources */,
 				8C831D48272B12C000CCC9C4 /* User.swift in Sources */,
