@@ -7,20 +7,39 @@
 
 import UIKit
 
-class SlotsVC: UIViewController {
-
+class SlotsVC: UIViewController,LoadingIndicatorDelegate {
+    
     @IBOutlet weak var slotTbl: UITableView!
+    
+    var vm = SlotVM()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         slotTbl.delegate = self
         slotTbl.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
     
-
-   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getAvailableSlots()
+    }
+    
+    func getAvailableSlots(){
+        self.startLoading()
+        vm.fetchFoods { success, code, message in
+            self.stopLoading()
+            
+            if success{
+                self.slotTbl.reloadData()
+            }
+            
+        }
+    }
+    
+    
 }
 
 extension SlotsVC:UITableViewDelegate,UITableViewDataSource{
@@ -41,9 +60,9 @@ extension SlotsVC:UITableViewDelegate,UITableViewDataSource{
         let cellCount:Int?
         
         if section == 0{
-            cellCount = 4
+            cellCount = vm.vipSlotList.count
         }else{
-            cellCount = 16
+            cellCount = vm.normalSlotList.count
         }
         return cellCount ?? 0
     }
