@@ -22,6 +22,8 @@ class BookingVC: UIViewController,LoadingIndicatorDelegate,CLLocationManagerDele
     var latitude:CLLocationDegrees?
     var ref: DatabaseReference! = Database.database().reference()
     
+    print("")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         slotNoTxt.text = "1"
