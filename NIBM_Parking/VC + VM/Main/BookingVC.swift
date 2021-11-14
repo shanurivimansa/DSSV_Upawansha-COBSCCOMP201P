@@ -8,58 +8,53 @@
 import UIKit
 import FirebaseStorage
 import Firebase
+import CoreLocation
 
-class BookingVC: UIViewController,LoadingIndicatorDelegate {
+class BookingVC: UIViewController,LoadingIndicatorDelegate,CLLocationManagerDelegate {
     
     @IBOutlet weak var scanQrBtn: UIButton!
     @IBOutlet weak var slotNoTxt: UITextField!
     @IBOutlet weak var bookBtn: UIButton!
     
     var vm = BookingVM()
+    let locationManager = CLLocationManager()
+    var longitude:CLLocationDegrees?
+    var latitude:CLLocationDegrees?
     var ref: DatabaseReference! = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         slotNoTxt.text = "1"
+        
         // Do any additional setup after loading the view.
     }
     
-
-//
-//    func fetchAvailableSlots(){
-//        let okAction = AlertAction(title: .Ok)
-//        self.startLoading()
-//        vm.fetchSlots{ success,code,message in
-//            if success{
-//
-//
-//                let idAvailable = self.vm.SlotList.filter({$0.slotId == self.slotNoTxt.text})
-//                if let dataToIdAvailable = idAvailable.first{
-//                    if dataToIdAvailable.isAvailable != "true"{
-//                        self.stopLoading()
-//                        AlertProvider(vc: self).showAlert(title: "Alert", message: "Slot is Not Available !!", action: okAction)
-//                    }else{
-//                        self.ref.child("slots").child(self.slotNoTxt.text ?? "").updateChildValues(["isAvailable": "false"])
-//                    }
-//                }
-//            }
-//
-//        }
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isLocationAccessEnabled()
+    }
     
     
-    func fetchAvailableSlots(slotIDTxt:String?) {
+    
+    func fetchAvailableSlots(){
+        let okAction = AlertAction(title: .Ok)
         self.startLoading()
-        
-        ref.child("slots").child(slotIDTxt ?? "").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            print(value)
-            self.stopLoading()
-        }) { (error) in
-            print(error.localizedDescription)
+        vm.fetchSlots{ success,code,message in
+            if success{
+                
+                
+                let idAvailable = self.vm.SlotList.filter({$0.slotId == self.slotNoTxt.text})
+                if let dataToIdAvailable = idAvailable.first{
+                    if dataToIdAvailable.isAvailable != "true"{
+                        self.stopLoading()
+                        AlertProvider(vc: self).showAlert(title: "Alert", message: "Slot is Not Available !!", action: okAction)
+                    }else{
+                        self.ref.child("slots").child(self.slotNoTxt.text ?? "").updateChildValues(["isAvailable": "false"])
+                    }
+                }
+            }
+            
         }
-        
     }
     
     
@@ -71,10 +66,18 @@ class BookingVC: UIViewController,LoadingIndicatorDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+    
     @IBAction func bookSlotAction(_ sender: Any) {
         
-        fetchAvailableSlots(slotIDTxt: slotNoTxt.text)
+        fetchAvailableSlots()
         
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        self.longitude = locValue.longitude
+        self.latitude = locValue.latitude
     }
     
     
@@ -88,5 +91,52 @@ extension BookingVC:scannerDelegate{
         slotNoTxt.text = slotNo
     }
     
+    
+}
+
+
+//Location Access
+extension BookingVC{
+    
+    func isLocationAccessEnabled() {
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                initLocationManager()
+            case .authorizedAlways, .authorizedWhenInUse:
+                print("Access")
+            }
+        } else {
+            print("Location services not enabled")
+            initLocationManager()
+        }
+    }
+    
+    
+    
+    func initLocationManager(){
+        
+        if CLLocationManager.locationServicesEnabled() {
+            
+            switch CLLocationManager.authorizationStatus() {
+            case .restricted, .denied:
+                AlertProvider(vc: self).showAlertWithAction(title: "Access Needed", message: "Need permission to use the location services. Go to settings and unable access permission for location services", action: AlertAction(title: "Settings")) { (action) in
+                    if action.title == "Settings" {
+                        let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
+                        UIApplication.shared.open(settingsAppURL, options: [:], completionHandler: nil)
+                    }
+                }
+                break
+            case .authorizedAlways, .authorizedWhenInUse:
+                
+                break
+            default :
+                locationManager.requestWhenInUseAuthorization()
+            }
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
     
 }

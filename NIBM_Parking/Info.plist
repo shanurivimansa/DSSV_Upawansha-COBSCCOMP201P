@@ -24,6 +24,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>We need you camera access to read the QR code</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Application wants to use your location to parking cancellation</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Application wants to use your location to parking cancellation</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
